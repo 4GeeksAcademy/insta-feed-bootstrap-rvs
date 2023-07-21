@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Instagram Feed With Bootstrap</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex">
+            <a class="navbar-brand ms-5" href="#">
+                <img src="./assets/instagram.png" alt="logo-instagram" width="20" height="20">
+                <p class="fw-bold d-inline-block text-center">Instagram</p>
+            </a>
+            <div>
+                <!-- Primer Boton Trigger -->
+                <button type="button" class="btn btn-success me-4" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Create a new post
+                </button>
+                <!-- Segundo Boton Dropdown -->
+                <button class="btn btn-secondary dropdown-toggle me-5 " type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./assets/setting.png" alt="setting" width="20" height="20">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end me-5" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-red" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Caption:</label>
+                            <textarea class="form-control" id="message-text"
+                                placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                    </form>
+                    <img src="./assets/photo-camera-interface-symbol-for-button.png" width="30" height="30"
+                        class="img-thumbnail bg-light rounded" alt="camera">
+                    <img src="./assets/pin.png" class="img-thumbnail bg-light rounded" width="30" height="30"
+                        alt="location">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                <img src="./assets/fondos/grid.png" alt="grid" width="15px" height="15px">
+            </button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                <img src="./assets/fondos/square.png" alt="grid" width="15px" height="15px">
+            </button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <div class="container-fluid">
+                <div class="row m-3">
+                    <div class="col-md">
+                        <img src="./assets/fondos/1.jpg" alt="1" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/2.jpg" alt="2" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/3.jpg" alt="3" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md">
+                        <img src="./assets/fondos/4.jpg" alt="4" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/5.jpg" alt="5" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/6.jpg" alt="6" width="100%" height="100%">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-md">
+                        <img src="./assets/fondos/7.jpg" alt="7" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/8.jpg" alt="8" width="100%" height="100%">
+                    </div>
+                    <div class="col-md">
+                        <img src="./assets/fondos/9.jpg" alt="9" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+                <div class="cards border border-body-tertiary m-2" style="width:500px">
+                    <div class="card-title d-flex justify-content-between mt-3">
+                        <div>
+                            <img src="./assets/html5.png" alt="html" width="30px" height="30px">
+                            <p class="fw-bold d-inline-block text-center">RVSolutions</p>
+                        </div>
+                        <div>
+                            <img class="puntos" src="./assets/dots.png" alt="puntos" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./assets/fondos/1.jpg" alt="1" width="50%" height="50%">
+                    <div class="m-2 d-flex justify-content-between">
+                        <div>
+                            <img class="me-1" src=" ./assets/heart.png" alt="like" width="20px" height="20px">
+                            <img class="me-1" src="./assets/speech-bubble.png" alt="comentar" width="20px"
+                                height="20px">
+                            <img src="./assets/send.png" alt="enviar" width="20px" height="20px">
+                        </div>
+                        <div class=" iconos-derecho">
+                            <img src="./assets/saved.png" alt=salvar" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Liked by <strong>4GeeksAcademy, RVS, HTML </strong>and
+                            <strong>1,000,000
+                                others</strong>
+                        </p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                            enim,
+                            quisquam
+                            praesentium tempora cupiditate perferendis amet, adipisci laudantium repudiandae aut
+                            autem!
+                            Nam corporis sapiente quo, et rem ipsam repellendus placeat.
+                            <strong>4GeeksAcademy</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="cards border border-body-tertiary m-2" style="width:500px">
+                    <div class="card-title d-flex justify-content-between mt-3">
+                        <div>
+                            <img src="./assets/html5.png" alt="html" width="30px" height="30px">
+                            <p class="fw-bold d-inline-block text-center">RVSolutions</p>
+                        </div>
+                        <div>
+                            <img class="puntos" src="./assets/dots.png" alt="puntos" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./assets/fondos/2.jpg" alt="2" width="50%" height="50%">
+                    <div class="m-2 d-flex justify-content-between">
+                        <div>
+                            <img class="me-1" src=" ./assets/heart.png" alt="like" width="20px" height="20px">
+                            <img class="me-1" src="./assets/speech-bubble.png" alt="comentar" width="20px"
+                                height="20px">
+                            <img src="./assets/send.png" alt="enviar" width="20px" height="20px">
+                        </div>
+                        <div class=" iconos-derecho">
+                            <img src="./assets/saved.png" alt=salvar" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Liked by <strong>4GeeksAcademy, RVS, HTML </strong>and
+                            <strong>1,000,000
+                                others</strong>
+                        </p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                            enim,
+                            quisquam
+                            praesentium tempora cupiditate perferendis amet, adipisci laudantium repudiandae aut
+                            autem!
+                            Nam corporis sapiente quo, et rem ipsam repellendus placeat.
+                            <strong>4GeeksAcademy</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="cards border border-body-tertiary m-2" style="width:500px">
+                    <div class="card-title d-flex justify-content-between mt-3">
+                        <div>
+                            <img src="./assets/html5.png" alt="html" width="30px" height="30px">
+                            <p class="fw-bold d-inline-block text-center">RVSolutions</p>
+                        </div>
+                        <div>
+                            <img class="puntos" src="./assets/dots.png" alt="puntos" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./assets/fondos/3.jpg" alt="3" width="50%" height="50%">
+                    <div class="m-2 d-flex justify-content-between">
+                        <div>
+                            <img class="me-1" src=" ./assets/heart.png" alt="like" width="20px" height="20px">
+                            <img class="me-1" src="./assets/speech-bubble.png" alt="comentar" width="20px"
+                                height="20px">
+                            <img src="./assets/send.png" alt="enviar" width="20px" height="20px">
+                        </div>
+                        <div class=" iconos-derecho">
+                            <img src="./assets/saved.png" alt=salvar" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Liked by <strong>4GeeksAcademy, RVS, HTML </strong>and
+                            <strong>1,000,000
+                                others</strong>
+                        </p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                            enim,
+                            quisquam
+                            praesentium tempora cupiditate perferendis amet, adipisci laudantium repudiandae aut
+                            autem!
+                            Nam corporis sapiente quo, et rem ipsam repellendus placeat.
+                            <strong>4GeeksAcademy</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="cards border border-body-tertiary m-2" style="width:500px">
+                    <div class="card-title d-flex justify-content-between mt-3">
+                        <div>
+                            <img src="./assets/html5.png" alt="html" width="30px" height="30px">
+                            <p class="fw-bold d-inline-block text-center">RVSolutions</p>
+                        </div>
+                        <div>
+                            <img class="puntos" src="./assets/dots.png" alt="puntos" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <img class="card-img-top" src="./assets/fondos/4.jpg" alt="4" width="50%" height="50%">
+                    <div class="m-2 d-flex justify-content-between">
+                        <div>
+                            <img class="me-1" src=" ./assets/heart.png" alt="like" width="20px" height="20px">
+                            <img class="me-1" src="./assets/speech-bubble.png" alt="comentar" width="20px"
+                                height="20px">
+                            <img src="./assets/send.png" alt="enviar" width="20px" height="20px">
+                        </div>
+                        <div class=" iconos-derecho">
+                            <img src="./assets/saved.png" alt=salvar" width="20px" height="20px">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Liked by <strong>4GeeksAcademy, RVS, HTML </strong>and
+                            <strong>1,000,000
+                                others</strong>
+                        </p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+                            enim,
+                            quisquam
+                            praesentium tempora cupiditate perferendis amet, adipisci laudantium repudiandae aut
+                            autem!
+                            Nam corporis sapiente quo, et rem ipsam repellendus placeat.
+                            <strong>4GeeksAcademy</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
